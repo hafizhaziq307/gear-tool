@@ -1,14 +1,39 @@
 # gearTool
-An [Epic Seven](https://play.google.com/store/apps/details?id=com.stove.epic7.google&hl=en_US&gl=US) gear rating tool.
+Epic Seven is a mobile-based RPG from Smilegate.
+
+### Limitation
+- Support epic gear only.
+- Support T6(lvl 72 - 85) gear only.
+- Does not support flat substat gear.
+
++15 enhancement gear is supposed to have a total of 5 rolls, if you encountered a total roll less than 5,  then please use the score percentage only.
 
 <img src="./res/output.png" alt="output-gearTool" >
+
+### Formula
+It used the 8 golden rule standard:
+
+| Sub Stat                  | Rate
+| ------------------------- | -------------
+| Hp/Atk/Eff/Eff-Res/Def    | 1
+| Crit Dmg                  | 1.14
+| Crit Rate                 | 1.6
+| Speed                     | 2
+
+### Result
+| Score Percentage | Gear Category
+| ---------------- | -------------
+| 80% - 100%       | Godly Gear
+| 75% - 79%        | Good Gear
+| 70% - 74%        | Normal Gear
+| 69% - 0%         | Trash Gear
 
 ## Setup
 - Clone this repo to your desktop.
 - Run `yarn install`.
 
 ## Usage
-Run `yarn serve` to start the web application via localhost:8080 or install the desktop application ([.msi]()
+Run `yarn serve` to start the web application via localhost:8080 or install the desktop application ([.msi](https://drive.google.com/file/d/1jWDyK5EjtCFSUtay86T3EbHMbAFBcuL_/view?usp=sharing))
 
 ## Stack
 It is created using those amazing technologies:
