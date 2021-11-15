@@ -6,12 +6,12 @@ Epic Seven is a mobile-based RPG from Smilegate.
 - Support T6(lvl 72 - 85) gear only.
 - Does not support flat substat gear.
 
-+15 enhancement gear is supposed to have a total of 5 rolls, if you encountered a total roll less than 5,  then please use the score percentage only.
++15 enhancement gear is supposed to have 5 rolls, if you encountered a roll that is less than 5,  then use the score percentage only.
 
 <img src="./res/output.png" alt="output-gearTool" >
 
 ### Formula
-It used the 8 golden rule standard:
+It used the 8 Golden Rule Standard:
 
 | Sub Stat                  | Rate
 | ------------------------- | -------------
