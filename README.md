@@ -28,13 +28,6 @@ It used the 8 Golden Rule Standard:
 | 70% - 74%        | Normal Gear
 | 69% - 0%         | Trash Gear
 
-## Setup
-- Clone this repo to your desktop.
-- Run `yarn install`.
-
-## Usage
-Run `yarn serve` to start the web application via localhost:8080 or install the desktop application ([.msi](https://drive.google.com/file/d/1jWDyK5EjtCFSUtay86T3EbHMbAFBcuL_/view?usp=sharing))
-
 ## Stack
 It is created using those amazing technologies:
 - [Vue](https://vuejs.org/)
