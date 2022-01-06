@@ -39,4 +39,3 @@ It is created using those amazing technologies:
 >You can check out the full license [here](https://github.com/hafizhaziq307/gearTool/blob/main/LICENSE)
 
 This project is licensed under the terms of the **MIT** license.
-.
