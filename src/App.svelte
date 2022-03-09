@@ -1,11 +1,10 @@
 <script>
   import Background from "./components/Background.svelte";
-  import ResultContainer from "./components/ResultContainer.svelte";
+  import Result from "./components/Result.svelte";
+  import Select from "./components/Select.svelte";
 
   let scores = 0;
   let isCalculate = false;
-
-  let tier;
 
   // input
   const substats = [
@@ -28,6 +27,21 @@
       title: "Crit Chance",
       multiplier: 1.6,
       maxRolls: [5, 10, 15, 20, 25, 30],
+    },
+    {
+      title: "Atk (flat)",
+      multiplier: 0,
+      maxRolls: [47, 94, 141, 188, 235, 282],
+    },
+    {
+      title: "Def (flat)",
+      multiplier: 0,
+      maxRolls: [34, 68, 102, 136, 170, 204],
+    },
+    {
+      title: "Hp (flat)",
+      multiplier: 0,
+      maxRolls: [212, 424, 636, 848, 1060, 1272],
     },
   ];
 
@@ -70,7 +84,6 @@
       });
     }
     scores = ((scores / 72) * 100).toFixed(1);
-    setTier(scores);
   }
 
   function reset() {
@@ -108,56 +121,38 @@
         return roll;
       }
     }
-    return NaN;
   }
 
-  function setTier(scores) {
-    if (scores <= 69) {
-      tier = "Trash Gear";
-    } else if (scores <= 74) {
-      tier = "Normal Gear";
-    } else if (scores <= 79) {
-      tier = "Good Gear";
-    } else {
-      tier = "Godly Gear";
-    }
-  }
+  // Atk        8/16
+  // crit dmg   17/28
 </script>
 
 <Background />
 
 <!-- content box -->
-<div
+<main
   class=" absolute top-1/2 left-1/2 w-[40rem] -translate-x-1/2 -translate-y-1/2 space-y-5 rounded-md bg-gray-800 text-white"
 >
   <!-- level & tier -->
   <div
     class="flex justify-between rounded-t-md bg-red-600 p-4 text-center text-3xl font-bold"
   >
-    <div class="w-full">Lvl 72 ~ 85</div>
-    <div class="w-full">Epic</div>
+    <div class="w-full select-none">Lvl 72 ~ 85</div>
+    <div class="w-full select-none">Epic</div>
   </div>
 
   <!-- substats -->
   <div class="w-full space-y-6 p-4">
     {#each results as result}
-      <div class="flex space-x-6">
-        <select
-          bind:value={result.title}
-          on:change={() => (result.value = "")}
-          class=" w-3/4 cursor-pointer rounded-md bg-gray-700 p-2 ring-1 ring-gray-500"
-        >
-          <option value="">choose substat</option>
-          {#each substats as substat}
-            <option value={substat.title}>
-              {substat.title}
-            </option>
-          {/each}
-        </select>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="col-span-2">
+          <Select list={substats} bind:value={result.title} />
+        </div>
+
         <input
           type="text"
           bind:value={result.value}
-          class="w-1/4 rounded-md bg-gray-700 p-2 ring-1 ring-gray-500"
+          class="rounded-md bg-gray-700 p-2 ring-1 ring-gray-500"
         />
       </div>
     {/each}
@@ -165,7 +160,7 @@
 
   <!-- results -->
   {#if isCalculate}
-    <ResultContainer {results} {scores} {tier} />
+    <Result list={results} {scores} />
   {/if}
 
   <!-- buttons -->
@@ -184,4 +179,4 @@
       RESET
     </button>
   </div>
-</div>
+</main>
