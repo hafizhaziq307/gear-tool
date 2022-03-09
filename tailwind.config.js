@@ -1,17 +1,11 @@
-const colors = require('tailwindcss/colors');
-
 module.exports = {
-  purge: ['./src/**/*.{vue,js,ts,jsx,tsx}'],
-  darkMode: false,
+  content: [
+    "./src/**/*.svelte",
+    "./public/index.html",
+    "./public/tailwind.css",
+  ],
   theme: {
-    extend: {
-      colors: {
-        gray: colors.gray,
-      }
-    },
-  },
-  variants: {
     extend: {},
   },
   plugins: [],
-}
+};

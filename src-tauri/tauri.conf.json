@@ -1,13 +1,13 @@
 {
   "package": {
-    "productName": "GearTool",
+    "productName": "gearTool",
     "version": "0.1.0"
   },
   "build": {
-    "distDir": "Set automatically by Vue CLI plugin",
-    "devPath": "Set automatically by Vue CLI plugin",
-    "beforeDevCommand": "",
-    "beforeBuildCommand": ""
+    "distDir": "../public",
+    "devPath": "http://localhost:8080",
+    "beforeDevCommand": "yarn dev",
+    "beforeBuildCommand": "yarn build"
   },
   "tauri": {
     "bundle": {
@@ -37,6 +37,7 @@
         "useBootstrapper": false,
         "exceptionDomain": "",
         "signingIdentity": null,
+        "providerShortName": null,
         "entitlements": null
       },
       "windows": {
@@ -53,17 +54,15 @@
     },
     "windows": [
       {
-        "title": "GearTool",
+        "title": "gearTool",
         "width": 800,
         "height": 600,
         "resizable": true,
-        "fullscreen": false,
-        "minWidth": 600,
-        "minHeight": 500
+        "fullscreen": false
       }
     ],
     "security": {
-      "csp": "default-src blob: data: filesystem: ws: wss: http: https: tauri: 'unsafe-eval' 'unsafe-inline' 'self' img-src: 'self'"
+      "csp": null
     }
   }
 }
