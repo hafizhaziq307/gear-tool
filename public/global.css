@@ -652,19 +652,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
-.bg-teal-600 {
+.bg-emerald-600 {
   --tw-bg-opacity: 1;
-  background-color: rgb(13 148 136 / var(--tw-bg-opacity));
+  background-color: rgb(5 150 105 / var(--tw-bg-opacity));
 }
 
 .bg-gray-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
-}
-
-.bg-emerald-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(5 150 105 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\/background\.png\'\)\] {
@@ -777,9 +772,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
-.hover\:bg-teal-700:hover {
+.hover\:bg-emerald-700:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(15 118 110 / var(--tw-bg-opacity));
+  background-color: rgb(4 120 87 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-gray-700:hover {
@@ -787,17 +782,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-teal-600:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(13 148 136 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-emerald-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(5 150 105 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-emerald-700:hover {
+.focus\:bg-gray-700:focus {
   --tw-bg-opacity: 1;
-  background-color: rgb(4 120 87 / var(--tw-bg-opacity));
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }

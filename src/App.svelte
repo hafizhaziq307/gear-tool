@@ -89,7 +89,6 @@
   function reset() {
     scores = 0;
     isCalculate = false;
-    tier = "";
 
     results = [
       {
@@ -113,6 +112,8 @@
         maxRoll: "",
       },
     ];
+
+    console.log(results);
   }
 
   function setMax(value, rolls) {
@@ -152,7 +153,7 @@
         <input
           type="text"
           bind:value={result.value}
-          class="rounded-md bg-gray-700 p-2 ring-1 ring-gray-500"
+          class="rounded-md bg-gray-800 p-2 ring-1 ring-gray-500 focus:bg-gray-700 focus:outline-none"
         />
       </div>
     {/each}
