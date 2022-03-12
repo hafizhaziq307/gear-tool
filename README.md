@@ -32,7 +32,7 @@ It used the 8 Golden Rule Standard:
 
 ## Stack
 It is created using those amazing technologies:
-- [Vue](https://vuejs.org/)
+- [Svelte](https://svelte.dev/)
 - [Tailwind](https://tailwindcss.com/)
 - [Tauri](https://tauri.studio/en/)
 - And many others!
