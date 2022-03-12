@@ -1,6 +1,4 @@
 <script>
-  import { clickOutside } from "./clickOutside.js";
-
   export let list;
   export let value;
 
@@ -27,11 +25,7 @@
   </div>
 
   {#if open}
-    <div
-      use:clickOutside
-      on:click_outside={() => (open = false)}
-      class="absolute z-40 w-full rounded bg-gray-700 ring-1 ring-gray-500"
-    >
+    <div class="absolute z-40 w-full rounded bg-gray-700 ring-1 ring-gray-500">
       {#each list as element}
         <div
           on:click={() => {

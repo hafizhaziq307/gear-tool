@@ -1,5 +1,4 @@
 <script>
-  import Background from "./components/Background.svelte";
   import Result from "./components/Result.svelte";
   import Select from "./components/Select.svelte";
 
@@ -70,6 +69,8 @@
   ];
 
   function calculate() {
+    if (isCalculate) scores = 0;
+
     isCalculate = true;
 
     for (const result of results) {
@@ -112,23 +113,14 @@
         maxRoll: "",
       },
     ];
-
-    console.log(results);
   }
 
   function setMax(value, rolls) {
     for (const roll of rolls) {
-      if (value <= roll) {
-        return roll;
-      }
+      if (value <= roll) return roll;
     }
   }
-
-  // Atk        8/16
-  // crit dmg   17/28
 </script>
-
-<Background />
 
 <!-- content box -->
 <main
