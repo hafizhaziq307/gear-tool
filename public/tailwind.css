@@ -1,9 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer {
-  .substat-input {
-    @apply rounded-sm bg-gray-700 ring-1 ring-gray-500;
-  }
-}
