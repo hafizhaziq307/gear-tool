@@ -7,7 +7,7 @@ Epic Seven is a mobile-based RPG from Smilegate.
 
 +15 enhancement gear is supposed to have 5 rolls, if you encountered a roll that is less than 5,  then use the score percentage only.
 
-<img src="./res/output.png" alt="output-gearTool" >
+<img src="./public/res/output.png" alt="output-gearTool" width="50%">
 
 ### Formula
 It used the 8 Golden Rule Standard:
